@@ -17,7 +17,7 @@ basic.forever(function () {
     huskylens.request()
     id = huskylens.readBox_s(Content3.ID)
     if (id > 0) {
-        basic.pause(500)
+        basic.pause(100)
         basic.showNumber(id)
         OLED.clear()
         OLED.writeStringNewLine(name[id - 1])
