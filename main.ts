@@ -1,4 +1,4 @@
-let id = 0
+let id2 = 0
 basic.showNumber(0)
 huskylens.initI2c()
 basic.showNumber(1)
@@ -13,13 +13,8 @@ let name = [
 "Anson Kong"
 ]
 basic.showNumber(4)
+led.enable(false)
 basic.forever(function () {
     huskylens.request()
-    id = huskylens.readBox_s(Content3.ID)
-    if (id > 0) {
-        basic.pause(100)
-        basic.showNumber(id)
-        OLED.clear()
-        OLED.writeStringNewLine(name[id - 1])
-    }
+    id2 = huskylens.readBox_s(Content3.ID)
 })
